@@ -11,6 +11,7 @@ $config = [
 	, 'foto_path' => 'public/images/foto/'
 	, 'dokumen_path' => 'public/files/dokumen/'
 	, 'email_support' => 'support@pdsionline.org'
+	, 'pakta_integritas_path' => 'public/files/pakta-integritas/'
 	
 	/* File Picker */
 	, 'thumbnail' => [

@@ -438,6 +438,12 @@ switch ($_GET['action']) {
 		exit();
 
 	case 'print':
+		$sql = 'SELECT * FROM user WHERE id_user = ?';
+        $user = $db->query($sql, $_SESSION['user']['id_user'])->result();
+		if($user[0]['pakta_integritas'] === ''){
+			exit_error('Silahkan upload Pakta Integritas terlebih dahulu agar kartu dapat dicetak');
+		}
+	
 		$where_own = where_own();
 
 		$data = set_data();
