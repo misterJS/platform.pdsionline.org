@@ -1,0 +1,41 @@
+[20-Oct-2023 16:24:17 Asia/Jakarta] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home/ufdqrnbz/platform.pdsionline.org/app/modules/dashboard/views/result.php:50
+Stack trace:
+#0 /home/ufdqrnbz/platform.pdsionline.org/system/functions.php(37): include()
+#1 /home/ufdqrnbz/platform.pdsionline.org/app/modules/dashboard/dashboard.php(68): load_view('views/result.ph...', Array)
+#2 /home/ufdqrnbz/platform.pdsionline.org/index.php(187): include('/home/ufdqrnbz/...')
+#3 {main}
+  thrown in /home/ufdqrnbz/platform.pdsionline.org/app/modules/dashboard/views/result.php on line 50
+[20-Oct-2023 16:35:31 Asia/Jakarta] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home/ufdqrnbz/platform.pdsionline.org/app/modules/dashboard/views/result.php:50
+Stack trace:
+#0 /home/ufdqrnbz/platform.pdsionline.org/system/functions.php(37): include()
+#1 /home/ufdqrnbz/platform.pdsionline.org/app/modules/dashboard/dashboard.php(68): load_view('views/result.ph...', Array)
+#2 /home/ufdqrnbz/platform.pdsionline.org/index.php(187): include('/home/ufdqrnbz/...')
+#3 {main}
+  thrown in /home/ufdqrnbz/platform.pdsionline.org/app/modules/dashboard/views/result.php on line 50
+[01-Nov-2023 11:34:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Cannot use a scalar value as an array in /home/ufdqrnbz/platform.pdsionline.org/app/modules/cetakkartu/cetakkartu.php:224
+Stack trace:
+#0 /home/ufdqrnbz/platform.pdsionline.org/index.php(187): include()
+#1 {main}
+  thrown in /home/ufdqrnbz/platform.pdsionline.org/app/modules/cetakkartu/cetakkartu.php on line 224
+[05-Dec-2023 07:38:42 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Cannot use a scalar value as an array in /home/ufdqrnbz/platform.pdsionline.org/app/modules/cetakkartu/cetakkartu.php:224
+Stack trace:
+#0 /home/ufdqrnbz/platform.pdsionline.org/index.php(187): include()
+#1 {main}
+  thrown in /home/ufdqrnbz/platform.pdsionline.org/app/modules/cetakkartu/cetakkartu.php on line 224
+[05-Dec-2023 07:51:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Cannot use a scalar value as an array in /home/ufdqrnbz/platform.pdsionline.org/app/modules/cetakkartu/cetakkartu.php:224
+Stack trace:
+#0 /home/ufdqrnbz/platform.pdsionline.org/index.php(187): include()
+#1 {main}
+  thrown in /home/ufdqrnbz/platform.pdsionline.org/app/modules/cetakkartu/cetakkartu.php on line 224
+[05-Dec-2023 07:53:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Cannot use a scalar value as an array in /home/ufdqrnbz/platform.pdsionline.org/app/modules/cetakkartu/cetakkartu.php:224
+Stack trace:
+#0 /home/ufdqrnbz/platform.pdsionline.org/index.php(187): include()
+#1 {main}
+  thrown in /home/ufdqrnbz/platform.pdsionline.org/app/modules/cetakkartu/cetakkartu.php on line 224
+[06-Dec-2023 23:55:40 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: PDOStatement::execute(): Argument #1 ($params) must be of type ?array, string given in /home/ufdqrnbz/platform.pdsionline.org/system/libraries/database/pdo.php:61
+Stack trace:
+#0 /home/ufdqrnbz/platform.pdsionline.org/system/libraries/database/pdo.php(61): PDOStatement->execute('')
+#1 /home/ufdqrnbz/platform.pdsionline.org/app/modules/user/user.php(126): Database->query('SELECT * FROM u...', '')
+#2 /home/ufdqrnbz/platform.pdsionline.org/index.php(187): include('/home/ufdqrnbz/...')
+#3 {main}
+  thrown in /home/ufdqrnbz/platform.pdsionline.org/system/libraries/database/pdo.php on line 61
