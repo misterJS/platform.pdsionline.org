@@ -78,7 +78,14 @@ function check_login()
 		$_SESSION ['user'] = set_user($user, $setting_siswa);
 		$_SESSION['logged_in'] = true;
 		
-		header('location:./');
+		$sql = 'SELECT * FROM siswa WHERE id_user_input = ?';
+		$data_siswa = $db->query($sql, $user['id_user'])->getResultArray();
+
+		if(empty($data_siswa)){
+			header('location:./daftarnama/add');
+		} else {
+			header('location:./');
+		}
 	}
 }
 
