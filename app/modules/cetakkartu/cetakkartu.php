@@ -208,7 +208,7 @@ switch ($_GET['action']) {
 		$sql_propinsi = 'SELECT * FROM wilayah_propinsi';
 		$provinceData = $db->query($sql_propinsi)->getResultArray();
 
-		foreach ($result as &$data) {
+		foreach ($result as $data) {
 			$provinceId = $data['province'];
 			$provinceName = '';
 
