@@ -20,7 +20,7 @@ $(document).ready(function() {
 				"type": "POST"
 			},
 			"columnDefs": [ {
-				"targets": [0,1,2,8],
+				"targets": [0,1,2,6],
 				"orderable": false
 				} ],
 			"columns": column,

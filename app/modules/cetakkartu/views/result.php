@@ -33,8 +33,6 @@
 						, 'nama' => 'Nama'
 						, 'tgl_lahir' => 'TTL'
 						, 'alamat' => 'Alamat'
-						, 'nis' => 'NIS'
-						, 'nisn' => 'NISN'
 						, 'ignore_search_action' => 'Action'
 					];
 			$setting = ['order' => [3,'desc']];
