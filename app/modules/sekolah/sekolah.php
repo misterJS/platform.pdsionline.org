@@ -98,11 +98,11 @@ switch ($_GET['action']) {
 			} else {
 
 				$data_db['nama_sekolah'] = $_POST['nama_sekolah'];
-				$data_db['nama_dinas'] = $_POST['nama_dinas'];
+				$data_db['jurusan'] = $_POST['jurusan'];
 				$data_db['jenjang'] = $_POST['jenjang'];
-				$data_db['alamat'] = $_POST['alamat'];
-				$data_db['tlp_fax'] = $_POST['tlp_fax'];
-				$data_db['website'] = $_POST['website'];
+				$data_db['tahun_masuk'] = date("Y-m-d",strtotime($_POST['tahun_masuk']));
+				$data_db['tahun_keluar'] = date("Y-m-d",strtotime($_POST['tahun_keluar']));
+				$data_db['tahun_keluar_profesi'] = date("Y-m-d",strtotime($_POST['tahun_keluar_profesi']));
 				$data_db['email'] = $_SESSION['user']['email'];
 
 				$path = $config['kartu_path'];
@@ -146,6 +146,7 @@ switch ($_GET['action']) {
 						if ($new_name) {
 							$data_db['ijazah'] = $new_name;
 							$query = $db->insert('sekolah', $data_db);
+							header('location:./pakta-integritas');
 						} else {
 							$data['msg']['status'] = 'error';
 							$data['msg']['content'] = 'Error saat memperoses ijazah';
