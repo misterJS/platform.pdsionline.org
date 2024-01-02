@@ -29,11 +29,6 @@
 				<?=$th?>
 			</tr>
 		</thead>
-		<tfoot>
-			<tr>
-				<?=$th?>
-			</tr>
-		</tfoot>
 		</table>
 		<?php
 			foreach ($column as $key => $val) {
