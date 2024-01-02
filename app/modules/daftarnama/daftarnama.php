@@ -312,7 +312,7 @@ function set_data()
 	$tgl_lahir = $exp[2] . '-' . $exp[1] . '-' . $exp[0];
 	$data_db['nama'] = $_POST['nama'];
 	$data_db['jenis_kelamin'] = $_POST['jenis_kelamin'];
-	$data_db['email'] = $_POST['email'];
+	$data_db['email'] = $_SESSION['user']['email'];
 	$data_db['tempat_lahir'] = $_POST['tempat_lahir'];
 	$data_db['tgl_lahir'] = $tgl_lahir;
 	$data_db['alamat'] = $_POST['alamat'];
@@ -328,7 +328,6 @@ function validate_form()
 	require_once('app/libraries/FormValidation.php');
 	$validation = new FormValidation();
 	$validation->setRules('nama', 'Nama Siswa', 'required');
-	$validation->setRules('email', 'Email', 'trim|required');
 	$validation->setRules('tempat_lahir', 'Tempat Lahir', 'trim|required');
 	$validation->setRules('tgl_lahir', 'Tanggal Lahir', 'trim|required');
 	$validation->setRules('alamat', 'Alamat', 'trim|required');
