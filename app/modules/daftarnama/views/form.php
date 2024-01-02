@@ -65,7 +65,7 @@
 				<div class="form-group row mb-3">
 					<label class="col-sm-3 col-md-2 col-lg-3 col-xl-2 col-form-label">Email</label>
 					<div class="col-sm-5">
-						<input class="form-control" type="text" name="email" value="<?= set_value('email', @$email) ?>" required="required" />
+						<input class="form-control" type="text" name="email" value="<?= $_SESSION['user']['email'] ?>" disabled/>
 					</div>
 				</div>
 				<div class="form-group row mb-3">

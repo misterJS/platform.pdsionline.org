@@ -28,9 +28,9 @@ class SendEmail
 		$this->email->SMTPDebug = 0;
 		$this->email->isSMTP();
 		//Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
-		$this->email->Port = 587;
+		$this->email->Port = 465;
 		//Set the encryption system to use - ssl (deprecated) or tls
-		$this->email->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+		$this->email->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 		$this->email->SMTPAuth = true;
 		
 		return $this->email;

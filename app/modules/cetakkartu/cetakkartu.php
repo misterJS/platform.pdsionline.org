@@ -208,8 +208,8 @@ switch ($_GET['action']) {
 		$sql_propinsi = 'SELECT * FROM wilayah_propinsi';
 		$provinceData = $db->query($sql_propinsi)->getResultArray();
 
-		foreach ($result as $data) {
-			$provinceId = $data['province'];
+		foreach ($result as $data_siswa) {
+			$provinceId = $result['province'];
 			$provinceName = '';
 
 			// Cari nama provinsi berdasarkan ID provinsi
@@ -252,7 +252,7 @@ switch ($_GET['action']) {
 
 		$mpdf->AddPageByArray([
 			'margin-left' => $printer['margin_left'],
-			'margin-right' => 0,
+			'margin-right' => $printer['margin_kartu_right'],
 			'margin-top' => $printer['margin_top'],
 			'margin-bottom' => 0,
 		]);
@@ -278,6 +278,22 @@ switch ($_GET['action']) {
 				background-size: 100% auto;
 				background:url("' . $config['base_url'] . $config['kartu_path'] . $setting_kartu['background_belakang'] . '")
 			}
+			.text-0 td {
+				color: #e4e6eb;
+				font-size: 21px;
+				width: 158px;
+			}
+
+			.text-1 td {
+				color: #e4e6eb;
+				font-size: 12px;
+				font-weight: 500;
+			}
+
+			.text-2 td {
+				color: #e4e6eb;
+				font-size: 17px;
+			}
 		</style>
 		<div class="kartu-content-container kartu-belakang"></div>';
 
@@ -291,9 +307,15 @@ switch ($_GET['action']) {
 				margin-top:' . ($printer['margin_top'] + $setting_kartu['data_depan_margin_top']) . 'mm 
 			}
 			.kartu-detail td {
+				margin: 0;
+				padding: 0;
 				font-family:' . $setting_kartu['data_depan_font_family'] . ';
 				font-size:' . $setting_kartu['data_depan_font_size'] . 'px;
+				font-weight:' . $setting_kartu['data_depan_font_weight'] . ';
+				text-align:' . $setting_kartu['data_depan_text_align'] . ';
+				line-height:' . $setting_kartu['data_depan_line_height'] . 'px;
 				line-height:10px;
+				vertical-align: top;
 			}
 			.kartu-detail .label {
 				width:' . $setting_kartu['data_depan_label_width'] . 'mm;
@@ -301,7 +323,7 @@ switch ($_GET['action']) {
 			</style>
 			<div class="kartu-detail">	
 			<table>';
-		foreach ($siswa_data_digunakan as $val_digunakan) {
+		foreach ($siswa_data_digunakan as $index => $val_digunakan) {
 
 			foreach ($fields as $name => $value) {
 
@@ -326,7 +348,7 @@ switch ($_GET['action']) {
 								<td>' . $val_digunakan['pattern'] . '</td>
 							</tr>';
 			} else {
-				$html .= '<tr>
+				$html .= '<tr class="text-' . $index . '">
 								<td>' . $val_digunakan['pattern'] . '</td>
 							</tr>';
 			}

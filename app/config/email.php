@@ -8,7 +8,7 @@ class EmailConfig {
 	// public $provider = 'AmazonSES';
 
 	public $client = [	'standard' => [
-										'host' => 'smtp.zoho.com'
+										'host' => 'mail.pdsionline.org'
 										, 'username' => 'admin@pdsionline.org'
 										, 'password' => 'PdsiOnline123_'
 									]
