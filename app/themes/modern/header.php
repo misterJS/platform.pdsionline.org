@@ -91,7 +91,7 @@ $user = $_SESSION['user'];
 	<header class="nav-header shadow">
 		<div class="nav-header-logo pull-left">
 			<a class="header-logo" href="<?=$config['base_url']?>" title="Jagowebdev">
-				<img height="44px" src="<?=BASE_URL . $config['images_path'] . $setting_app['logo_app']?>?=r"<?=time()?>/>
+				<img height="44px" src="<?=BASE_URL . $config['images_path'] . $setting_app['logo_app']?>"/>
 			</a>
 		</div>
 		<div class="pull-left nav-header-left">
