@@ -56,7 +56,7 @@ if (!$is_loggedin) {
 // Module
 $default_module = $config['default_module'];
 // echo '<pre>'; print_r($_SESSION['user']); die;
-if ($is_loggedin) {
+if ($is_loggedin && array_key_exists("default_module", $_SESSION['user'])) {
 	$query = $db->query('SELECT nama_module 
 					FROM module 
 					LEFT JOIN user USING(id_module)
