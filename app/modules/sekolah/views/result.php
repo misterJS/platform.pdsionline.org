@@ -23,7 +23,6 @@
 							<th>Universitas</th>
 							<th>Tahun Masuk</th>
 							<th>Tahun Lulus</th>
-							<th>Tahun Lulus Profesi</th>
 							<th>Aksi</th>
 						</tr>
 					</thead>
@@ -39,7 +38,6 @@
 						<td>' . $val['nama_sekolah'] . '</td>
 						<td>' . $val['tahun_masuk'] . '</td>
 						<td>' . $val['tahun_keluar'] . '</td>
-						<td>' . $val['tahun_keluar_profesi'] . '</td>
 						<td>' . btn_action([
 								'edit' => ['url' => '?action=edit&id=' . $val['id_sekolah']], 'delete' => [
 									'url' => '', 'id' =>  $val['id_sekolah'], 'delete-title' => 'Hapus data sekolah: <strong>' . $val['nama_sekolah'] . '</strong> ?'

@@ -102,7 +102,6 @@ switch ($_GET['action']) {
 				$data_db['jenjang'] = $_POST['jenjang'];
 				$data_db['tahun_masuk'] = date("Y-m-d",strtotime($_POST['tahun_masuk']));
 				$data_db['tahun_keluar'] = date("Y-m-d",strtotime($_POST['tahun_keluar']));
-				$data_db['tahun_keluar_profesi'] = date("Y-m-d",strtotime($_POST['tahun_keluar_profesi']));
 				$data_db['email'] = $_SESSION['user']['email'];
 
 				$path = $config['kartu_path'];

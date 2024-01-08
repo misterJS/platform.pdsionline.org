@@ -64,18 +64,18 @@
 						</div>
 					</div>
 					<div class="col-sm-6">
-						<label class="col-sm-12 col-form-label">Tahun Keluar</label>
+						<label class="col-sm-12 col-form-label">Tahun Lulus</label>
 						<div class="col-sm-12">
 							<input class="form-control date-picker" type="text" name="tahun_keluar" value="<?= set_value('tahun_keluar', date("d-m-Y",strtotime(@$tahun_keluar ?? ''))) ?>" />
 						</div>
 					</div>
 				</div>
-				<div class="form-group mb-3">
+				<!-- <div class="form-group mb-3">
 					<label class="col-sm-3 col-md-2 col-lg-3 col-xl-2 col-form-label">Tahun Lulus Profesi</label>
 					<div class="col-sm-5">
 						<input class="form-control date-picker" type="text" name="tahun_keluar_profesi" value="<?= set_value('tahun_keluar_profesi', date("d-m-Y",strtotime(@$tahun_keluar_profesi ?? ''))) ?>" />
 					</div>
-				</div>
+				</div> -->
 				<div class="form-group mb-3">
 					<label class="col-sm-3 col-md-2 col-lg-3 col-xl-2 col-form-label">Upload Ijazah</label>
 					<div class="col-sm-5">
